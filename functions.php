@@ -11,7 +11,6 @@
  * @since Aquarius 1.0
  * @author wplovin <hello@wplovin.com>
  */
-?><?php
 
 /**
  * Setup some basic variables.
@@ -114,7 +113,6 @@ function wplovin_scripts_styles() {
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-ps-js', get_template_directory_uri() . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.with-mousewheel.min.js', array( 'jquery' ), 'v0.4.6', true );
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-fitvids-js', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), 'v1.0.3', true );
 
-
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-style', get_stylesheet_uri(), array(), '1.0' );
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-fa-icons', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array(), '4.0.3' );
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-sidr-css', get_template_directory_uri() . '/js/sidr/jquery.sidr.dark.css', array(), 'v1.2.1' );
@@ -143,6 +141,7 @@ if ( ! function_exists( 'wplovin_post_meta' ) ) {
 	function wplovin_post_meta() {
 
 		$date = wplovin_get_date(); 
+		
 		if ( $date ) {
 			echo $date;
 		}
