@@ -75,6 +75,7 @@ add_action( 'after_setup_theme', 'wplovin_setup' );
  * @since Aquarius 1.0
  */
 function wplovin_sidebar_init() {
+
 	register_sidebar( array(
 		'name'          => __( 'Main Widget Area', WPLOVIN_THEME_SLUG ),
 		'id'            => 'sidebar-1',
@@ -84,6 +85,7 @@ function wplovin_sidebar_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );	
+	
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget Area', WPLOVIN_THEME_SLUG ),
 		'id'            => 'footer-1',
@@ -93,6 +95,7 @@ function wplovin_sidebar_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	
 }
 add_action( 'widgets_init', 'wplovin_sidebar_init' );
 
@@ -125,6 +128,7 @@ function wplovin_scripts_styles() {
 		wp_enqueue_script( WPLOVIN_THEME_SLUG .'-masonry-js', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), 'v3.1.4', true );
 		$options['footerMasonry'] = true;
 	}
+	
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-aquarius-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), 'v1.0', true );
 	wp_localize_script( WPLOVIN_THEME_SLUG .'-aquarius-js', 'wplovin', $options );
 
@@ -233,10 +237,7 @@ function wplovin_nav_background() {
 
 	if( get_custom_header() ) {
 		$url = get_custom_header()->url;
-		$output =  '<style>
-						#navigation-main {background-image: url(\'' . $url . '\');}
-					</style>';
-					
+		$output =  '<style>#navigation-main {background-image: url(\'' . $url . '\');}</style>';
 		echo $output;
 	}
 
