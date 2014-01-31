@@ -242,7 +242,7 @@ function wplovin_nav_background() {
 
 }
 
-add_action('wp_head','wplovin_nav_background');
+add_action( 'wp_head','wplovin_nav_background' );
 
 /**
  * Go on! This theme is meant for hacking. 
