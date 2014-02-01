@@ -50,7 +50,7 @@
 			wp_nav_menu( $menu_args ); 
 		} else { ?>
 			<ul class="nav-menu-none full-padding cf">
-				<li><a href="<?php echo admin_url( 'nav-menus.php' ); ?>"><?php _e( 'Menu doesn\'t exist. Create a new one.', WPLOVIN_THEME_SLUG ); ?></a></li>
+				<li><a href="<?php echo admin_url( 'nav-menus.php' ); ?>"><?php _e( 'Menu doesn\'t exist. Create a new one.', 'wpl-aquarius' ); ?></a></li>
 			</ul>
 		<?php } ?>
 		

@@ -20,7 +20,7 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', WPLOVIN_THEME_SLUG ),
+				printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wpl-aquarius' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
@@ -37,13 +37,13 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav class="navigation comment-navigation" role="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', WPLOVIN_THEME_SLUG ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', WPLOVIN_THEME_SLUG ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'wpl-aquarius' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpl-aquarius' ) ); ?></div>
 			</nav>
 		<?php endif; ?>
 
 		<?php if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="no-comments"><?php _e( 'Comments are closed.' , WPLOVIN_THEME_SLUG ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.' , 'wpl-aquarius' ); ?></p>
 		<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
@@ -60,7 +60,7 @@ if ( post_password_required() )
 
 	<?php if ( !is_page() ) : ?>
 		<div id="comments" class="comments-area">
-		<p class="no-comments"><?php _e( 'Comments are disabled.' , WPLOVIN_THEME_SLUG ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are disabled.' , 'wpl-aquarius' ); ?></p>
 		</div>
 	<?php else : ?>
 		<hr class="faux-border" />

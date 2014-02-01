@@ -39,7 +39,7 @@ if ( ! isset( $content_width ) )
  */
 function wplovin_setup() {
 
-	load_theme_textdomain( WPLOVIN_THEME_SLUG, get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wpl-aquarius', get_template_directory() . '/languages' );
 	
 	$header_defaults = array(
 		'default-image'          => WPLOVIN_THEME_PATH . '/images/transparent-header.png',
@@ -57,7 +57,7 @@ function wplovin_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 	add_theme_support( 'post-thumbnails' );
 
-	register_nav_menu( 'primary', __( 'Navigation Menu', WPLOVIN_THEME_SLUG ) );
+	register_nav_menu( 'primary', __( 'Navigation Menu', 'wpl-aquarius' ) );
 
 	add_filter( 'use_default_gallery_style', '__return_false' );
 	
@@ -77,9 +77,9 @@ add_action( 'after_setup_theme', 'wplovin_setup' );
 function wplovin_sidebar_init() {
 
 	register_sidebar( array(
-		'name'          => __( 'Main Widget Area', WPLOVIN_THEME_SLUG ),
+		'name'          => __( 'Main Widget Area', 'wpl-aquarius' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Main sidebar.', WPLOVIN_THEME_SLUG ),
+		'description'   => __( 'Main sidebar.', 'wpl-aquarius' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -87,9 +87,9 @@ function wplovin_sidebar_init() {
 	) );	
 	
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget Area', WPLOVIN_THEME_SLUG ),
+		'name'          => __( 'Footer Widget Area', 'wpl-aquarius' ),
 		'id'            => 'footer-1',
-		'description'   => __( 'Main footer.', WPLOVIN_THEME_SLUG ),
+		'description'   => __( 'Main footer.', 'wpl-aquarius' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s one-third">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -125,7 +125,7 @@ function wplovin_scripts_styles() {
 		$options['sidrSidebar'] = true;
 		
 	if ( is_active_sidebar( 'footer-1' ) ) {
-		wp_enqueue_script( WPLOVIN_THEME_SLUG .'-masonry-js', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), 'v3.1.4', true );
+		wp_enqueue_script( 'jquery-masonry' );
 		$options['footerMasonry'] = true;
 	}
 	
@@ -151,12 +151,12 @@ if ( ! function_exists( 'wplovin_post_meta' ) ) {
 		}
 		
 		if( 'chat' != get_post_format() && 'quote' != get_post_format() ) {
-			$categories = get_the_category_list( __( ', ', WPLOVIN_THEME_SLUG ) );
+			$categories = get_the_category_list( __( ', ', 'wpl-aquarius' ) );
 			if ( $categories ) {
 				echo '<span class="categories"><i class="fa fa-folder-open"></i>' . $categories . '</span>';
 			}
 
-			$tags = get_the_tag_list( '', __( ', ', WPLOVIN_THEME_SLUG ) );
+			$tags = get_the_tag_list( '', __( ', ', 'wpl-aquarius' ) );
 			if ( $tags ) {
 				echo '<span class="tags"><i class="fa fa-tags"></i>' . $tags . '</span>';
 			}
@@ -175,13 +175,13 @@ if ( ! function_exists( 'wplovin_get_date' ) ) {
 	function wplovin_get_date() {
 	
 		if ( has_post_format( array( 'chat', 'status' ) ) )
-			$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', WPLOVIN_THEME_SLUG );
+			$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'wpl-aquarius' );
 		else
 			$format_prefix = '%2$s';
 
 		$date = sprintf( '<span class="date"><i class="fa fa-calendar-o"></i><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 			esc_url( get_permalink() ),
-			esc_attr( sprintf( __( 'Permalink to %s', WPLOVIN_THEME_SLUG ), the_title_attribute( 'echo=0' ) ) ),
+			esc_attr( sprintf( __( 'Permalink to %s', 'wpl-aquarius' ), the_title_attribute( 'echo=0' ) ) ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
 		);
@@ -215,11 +215,11 @@ if ( ! function_exists( 'wplovin_archive_pager' ) ) {
 			<div class="nav-links">
 
 				<?php if ( get_next_posts_link() ) : ?>
-				<div class="pager-link nav-previous"><i class="fa <?php echo $prev_icon; ?>"></i><?php next_posts_link( __( 'Older posts &rarr;', WPLOVIN_THEME_SLUG ) ); ?></div>
+				<div class="pager-link nav-previous"><i class="fa <?php echo $prev_icon; ?>"></i><?php next_posts_link( __( 'Older posts &rarr;', 'wpl-aquarius' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-				<div class="pager-link nav-next"><i class="fa <?php echo $next_icon; ?>"></i><?php previous_posts_link( __( '&larr; Newer posts', WPLOVIN_THEME_SLUG ) ); ?></div>
+				<div class="pager-link nav-next"><i class="fa <?php echo $next_icon; ?>"></i><?php previous_posts_link( __( '&larr; Newer posts', 'wpl-aquarius' ) ); ?></div>
 				<?php endif; ?>
 
 			</div>
@@ -241,19 +241,19 @@ if ( ! function_exists( 'wplovin_archive_header' ) ) {
 		<header class="archive-header">
 			<h3 class="archive-title"><?php
 				if ( is_day() ) :
-					printf( __( 'Daily archives: %s', WPLOVIN_THEME_SLUG ), '<span>' . get_the_date() . '</span>' );
+					printf( __( 'Daily archives: %s', 'wpl-aquarius' ), '<span>' . get_the_date() . '</span>' );
 				elseif ( is_month() ) :
-					printf( __( 'Monthly archives: %s', WPLOVIN_THEME_SLUG ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', WPLOVIN_THEME_SLUG ) ) . '</span>' );
+					printf( __( 'Monthly archives: %s', 'wpl-aquarius' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'wpl-aquarius' ) ) . '</span>' );
 				elseif ( is_year() ) :
-					printf( __( 'Yearly archives: %s', WPLOVIN_THEME_SLUG ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', WPLOVIN_THEME_SLUG ) ) . '</span>' );
+					printf( __( 'Yearly archives: %s', 'wpl-aquarius' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'wpl-aquarius' ) ) . '</span>' );
 				elseif ( is_category() )  :
-					printf( __( 'Category archives: %s', WPLOVIN_THEME_SLUG ), '<span>' . single_cat_title( '', false ) . '</span>' );
+					printf( __( 'Category archives: %s', 'wpl-aquarius' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				elseif ( is_tag() )  :
-					printf( __( 'Tag archives: %s', WPLOVIN_THEME_SLUG ), '<span>' . single_tag_title( '', false ) . '</span>' );				
+					printf( __( 'Tag archives: %s', 'wpl-aquarius' ), '<span>' . single_tag_title( '', false ) . '</span>' );				
 				elseif ( is_search() )  :
-					printf( __( 'Search results: %s', WPLOVIN_THEME_SLUG ), '<span>' . esc_html( $_GET['s'] ) . '</span>' );
+					printf( __( 'Search results: %s', 'wpl-aquarius' ), '<span>' . esc_html( $_GET['s'] ) . '</span>' );
 				else : 
-					_e( 'Archives', WPLOVIN_THEME_SLUG ); 
+					_e( 'Archives', 'wpl-aquarius' ); 
 				endif;
 			?></h3>
 		</header>
@@ -296,7 +296,7 @@ function wplovin_wp_title( $title, $sep ) {
 		$title = "$title $sep $site_description";
 
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', WPLOVIN_THEME_SLUG ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'wpl-aquarius' ), max( $paged, $page ) );
 
 	return $title;
 }

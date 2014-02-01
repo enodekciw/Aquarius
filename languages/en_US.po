@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Aquarius v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-02-01 01:02:48+0000\n"
+"Last-Translator: admin <admin@wplovin.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: comments.php:23
+#, php-format
+#@ wpl-aquarius
+msgctxt "comments title"
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40
+#@ wpl-aquarius
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:41
+#@ wpl-aquarius
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:46
+#@ wpl-aquarius
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:63
+#@ wpl-aquarius
+msgid "Comments are disabled."
+msgstr ""
+
+#: content-none.php:16
+#, php-format
+#@ wpl-aquarius
+msgid "No posts published so far. <a href=\"%1$s\">Ready to speak out?</a>."
+msgstr ""
+
+#: content-none.php:18
+#@ wpl-aquarius
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: content-none.php:21
+#@ wpl-aquarius
+msgid "Ooops.. Perhaps searching can help?"
+msgstr ""
+
+#: content.php:25
+#: content.php:36
+#, php-format
+#@ wpl-aquarius
+msgid "Continue reading %s"
+msgstr ""
+
+#: content.php:46
+#@ wpl-aquarius
+msgid "Read more"
+msgstr ""
+
+#: content.php:51
+#@ wpl-aquarius
+msgid "Edit"
+msgstr ""
+
+#: content.php:57
+#@ wpl-aquarius
+msgid "Continue reading &rarr;"
+msgstr ""
+
+#: footer.php:29
+#@ wpl-aquarius
+msgid "This website is powered by <a href=\"http://www.wordpress.org/\" title=\"WordPress\">WordPress</a> and <a href=\"http://wplovin.com/aquarius/\" title=\"Aquarius WordPress theme\">Aquarius</a><i class=\"fa fa-heart\"></i>"
+msgstr ""
+
+#: functions.php:60
+#@ wpl-aquarius
+msgid "Navigation Menu"
+msgstr ""
+
+#: functions.php:80
+#@ wpl-aquarius
+msgid "Main Widget Area"
+msgstr ""
+
+#: functions.php:82
+#@ wpl-aquarius
+msgid "Main sidebar."
+msgstr ""
+
+#: functions.php:90
+#@ wpl-aquarius
+msgid "Footer Widget Area"
+msgstr ""
+
+#: functions.php:92
+#@ wpl-aquarius
+msgid "Main footer."
+msgstr ""
+
+#: functions.php:154
+#: functions.php:159
+#@ wpl-aquarius
+msgid ", "
+msgstr ""
+
+#: functions.php:178
+#, php-format
+#@ wpl-aquarius
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: functions.php:184
+#, php-format
+#@ wpl-aquarius
+msgid "Permalink to %s"
+msgstr ""
+
+#: functions.php:218
+#@ wpl-aquarius
+msgid "Older posts &rarr;"
+msgstr ""
+
+#: functions.php:222
+#@ wpl-aquarius
+msgid "&larr; Newer posts"
+msgstr ""
+
+#: functions.php:244
+#, php-format
+#@ wpl-aquarius
+msgid "Daily archives: %s"
+msgstr ""
+
+#: functions.php:246
+#, php-format
+#@ wpl-aquarius
+msgid "Monthly archives: %s"
+msgstr ""
+
+#: functions.php:246
+#@ wpl-aquarius
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: functions.php:248
+#, php-format
+#@ wpl-aquarius
+msgid "Yearly archives: %s"
+msgstr ""
+
+#: functions.php:248
+#@ wpl-aquarius
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: functions.php:250
+#, php-format
+#@ wpl-aquarius
+msgid "Category archives: %s"
+msgstr ""
+
+#: functions.php:252
+#, php-format
+#@ wpl-aquarius
+msgid "Tag archives: %s"
+msgstr ""
+
+#: functions.php:254
+#, php-format
+#@ wpl-aquarius
+msgid "Search results: %s"
+msgstr ""
+
+#: functions.php:256
+#@ wpl-aquarius
+msgid "Archives"
+msgstr ""
+
+#: functions.php:299
+#, php-format
+#@ wpl-aquarius
+msgid "Page %s"
+msgstr ""
+
+#: header.php:53
+#@ wpl-aquarius
+msgid "Menu doesn't exist. Create a new one."
+msgstr ""
+

@@ -26,7 +26,7 @@
 		<?php } ?>
 		<div id="credits">
 			<span>
-			<?php _e( 'This website is powered by <a href="http://www.wordpress.org/" title="WordPress">WordPress</a> and <a href="http://wplovin.com/aquarius/" title="Aquarius WordPress theme">Aquarius</a><i class="fa fa-heart"></i>', WPLOVIN_THEME_SLUG ); ?>
+			<?php _e( 'This website is powered by <a href="http://www.wordpress.org/" title="WordPress">WordPress</a> and <a href="http://wplovin.com/aquarius/" title="Aquarius WordPress theme">Aquarius</a><i class="fa fa-heart"></i>', 'wpl-aquarius' ); ?>
 			</span>
 		</div>
 	</footer>
