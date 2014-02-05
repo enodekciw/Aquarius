@@ -22,7 +22,7 @@
 						</div>
 					<?php else : ?>
 						<div class="post-thumbnail">
-							<a href="<?php the_permalink(); ?>" title="<?php echo sprintf( __( 'Continue reading %s', 'wpl-aquarius' ), get_the_title() ); ?>"><?php the_post_thumbnail(); ?></a>
+							<a href="<?php the_permalink(); ?>" title="<?php echo sprintf( __( 'Continue reading %s', 'aquarius' ), get_the_title() ); ?>"><?php the_post_thumbnail(); ?></a>
 						</div>
 					<?php endif; ?>
 					
@@ -33,7 +33,7 @@
 					<?php if ( is_singular() ) : ?>
 						<?php the_title(); ?>
 					<?php else : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php echo sprintf( __( 'Continue reading %s', 'wpl-aquarius' ), get_the_title() ); ?>">
+						<a href="<?php the_permalink(); ?>" title="<?php echo sprintf( __( 'Continue reading %s', 'aquarius' ), get_the_title() ); ?>">
 							<?php the_title(); ?>
 						</a>
 					<?php endif; ?>
@@ -43,18 +43,18 @@
 		<?php endif; ?>
 		
 		<section class="entry-content">
-			<?php the_content( __( 'Read more', 'wpl-aquarius' ) ) ; ?>
+			<?php the_content( __( 'Read more', 'aquarius' ) ) ; ?>
 		</section>
 				
 		<footer class="entry-meta">
 			<?php if ( !is_page() ) wplovin_post_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'wpl-aquarius' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'aquarius' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
 		</footer>
 		
 	</div>
 	<?php if ( is_singular() ) : ?>
 		<?php wp_link_pages( array( 
-			'before'   =>   '<div class="page-links"><div class="faux-top-border">' . __( 'Continue reading &rarr;', 'wpl-aquarius' ), 
+			'before'   =>   '<div class="page-links"><div class="faux-top-border">' . __( 'Continue reading &rarr;', 'aquarius' ), 
 			'after'    =>   '<i class="fa ' . apply_filters( 'wplovin_pager_icon', 'fa-book' ) . '"></i></div></div>' ) 
 		); ?>
 	<?php endif; ?>
