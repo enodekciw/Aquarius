@@ -303,6 +303,17 @@ function wplovin_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'wplovin_wp_title', 10, 2 );
 
 /**
+ * Prevent linking to hashtag.
+ *
+ * @since Aquarius 1.0
+ */
+function wplovin_prevent_more_hashtag( $link ) {
+	$link = preg_replace( '|#more-[0-9]+|', '', $link );
+	return $link;
+}
+add_filter( 'the_content_more_link', 'wplovin_prevent_more_hashtag' );
+
+/**
  * Go on! This theme is meant for hacking. 
  *
  * Add some codes below this line to tweak it further, and don't forget to report the bugs to hello@wplovin.com, thanks!
