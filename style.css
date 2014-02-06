@@ -4,7 +4,7 @@ Theme URI: http://wplovin.com/aquarius
 Author: wplovin
 Author URI: http://wplovin.com/
 Description: Aquarius is a minimal theme with clean Georgia-based typography, built mainly for a personal bloggers. Let your users concentrate on reading, while you do the writing; wplovin.com 1/12.
-Version: 1.0.3
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, white, light, one-column, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, post-formats, sticky-post, translation-ready
@@ -365,9 +365,7 @@ ins {
   text-decoration: none;
 }
 hr {
-  background: url(http://wplovin.aquarius/wp-content/themes/aquarius/less/images/dotted-line.png) repeat center top;
-  background-size: 4px 4px;
-  border: 0;
+  border-bottom: 1px dashed #c0bfbb;
   height: 1px;
   margin: 0 0 24px;
 }

@@ -1,7 +1,10 @@
 === Aquarius ===
-Aquarius is a minimal theme with clean Georgia-based typography, built mainly for a personal bloggers. Let your users concentrate on reading, while you do the writing; Built with love by wplovin.
-Licensed under GNU General Public License v2 or later
-Live preview: http://wplovin.com/themes/aquarius/
+Contributors: wplovin
+Tags: blue, white, light, one-column, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, post-formats, sticky-post, translation-ready
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Aquarius is a minimal theme with clean Georgia-based typography, built mainly for a personal bloggers. Let your users concentrate on reading, while you do the writing; Built with love by wplovin. Live preview: http://wplovin.com/themes/aquarius/
 
 == Bundled with a theme ==
 
