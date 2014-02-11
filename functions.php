@@ -23,7 +23,7 @@
  */
 define( 'WPLOVIN_THEME_NAME', 'Aquarius' );
 define( 'WPLOVIN_THEME_SLUG', 'aquarius' );
-define( 'WPLOVIN_THEME_VERSION', '1.0' );
+define( 'WPLOVIN_THEME_VERSION', '1.0.6' );
 define( 'WPLOVIN_THEME_AUTHOR', 'wplovin' );
 define( 'WPLOVIN_THEME_AUTHOR_URL', 'http://wplovin.com' );
 define( 'WPLOVIN_THEME_PATH', get_template_directory_uri() );
@@ -120,7 +120,7 @@ function wplovin_scripts_styles() {
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-ps-js', get_template_directory_uri() . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.with-mousewheel.min.js', array( 'jquery' ), 'v0.4.6', true );
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-fitvids-js', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), 'v1.0.3', true );
 
-	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-style', get_stylesheet_uri(), array(), '1.0' );
+	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-style', get_stylesheet_uri(), array(), WPLOVIN_THEME_VERSION );
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-fa-icons', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.0.3' );
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-sidr-css', get_template_directory_uri() . '/js/sidr/jquery.sidr.dark.css', array(), 'v1.2.1' );
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-ps-css', get_template_directory_uri() . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.min.css', array(), 'v0.4.6' );
@@ -133,7 +133,7 @@ function wplovin_scripts_styles() {
 		$options['footerMasonry'] = true;
 	}
 	
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-aquarius-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), 'v1.0', true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-aquarius-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), WPLOVIN_THEME_VERSION, true );
 	wp_localize_script( WPLOVIN_THEME_SLUG .'-aquarius-js', 'wplovin', $options );
 
 }

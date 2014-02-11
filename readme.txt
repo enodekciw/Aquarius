@@ -17,5 +17,9 @@ Aquarius is a minimal theme with clean Georgia-based typography, built mainly fo
 
 == Changelog ==
 
+= 1.0.6 - Feb 11, 2014 =
+* Fixed jumpy sticky navigation
+* Minor CSS fix
+
 = 1.0 - Jan 31, 2014 =
 * Initial release
