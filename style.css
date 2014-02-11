@@ -365,6 +365,7 @@ ins {
   text-decoration: none;
 }
 hr {
+  border: none;
   border-bottom: 1px dashed #c0bfbb;
   height: 1px;
   margin: 0 0 24px;

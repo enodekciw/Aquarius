@@ -74,6 +74,7 @@ jQuery(function(){
 		min: jQuery('#navigation-main').offset().top,
 		onEnter: function(element, position) {
 			jQuery("#navigation-main").addClass('fixed-nav');
+			jQuery("#content-main").css('padding-top', jQuery("#navigation-main").outerHeight());
 			if(jQuery('#navigation-main').hasClass('sidr-open')) {
 				jQuery("#navigation-main").css({right: 'auto', left: -jQuery('#sidr-main').width()});
 			}			
@@ -82,6 +83,7 @@ jQuery(function(){
 			}
 		},
 		onLeave: function(element, position) {
+			jQuery("#content-main").css('padding-top', 0);
 			jQuery("#navigation-main").removeClass('fixed-nav').css({left: 0});
 		}
 	});
