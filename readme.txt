@@ -13,9 +13,14 @@ Aquarius is a minimal theme with clean Georgia-based typography, built mainly fo
 3. jQuery perfect-scrollbar, MIT License - http://noraesae.github.io/perfect-scrollbar/
 4. jQuery fitvids.js, WTFPL License - http://fitvidsjs.com/
 5. jquery-scrollspy, MIT License - https://github.com/sxalexander/jquery-scrollspy/
-6. Images in live preview - http://unsplash.com/
+6. html5shiv.js - https://github.com/aFarkas/html5shiv/
+7. Images in live preview - http://unsplash.com/
 
 == Changelog ==
+
+= 1.0.1 - Feb 17, 2014 =
+* Added missing /js/html5.js file
+* Changed get_template_directory_uri() to constant WPLOVIN_THEME_PATH in header.php
 
 = 1.0.6 - Feb 11, 2014 =
 * Fixed jumpy sticky navigation

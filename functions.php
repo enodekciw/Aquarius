@@ -23,7 +23,7 @@
  */
 define( 'WPLOVIN_THEME_NAME', 'Aquarius' );
 define( 'WPLOVIN_THEME_SLUG', 'aquarius' );
-define( 'WPLOVIN_THEME_VERSION', '1.0.6' );
+define( 'WPLOVIN_THEME_VERSION', '1.0.7' );
 define( 'WPLOVIN_THEME_AUTHOR', 'wplovin' );
 define( 'WPLOVIN_THEME_AUTHOR_URL', 'http://wplovin.com' );
 define( 'WPLOVIN_THEME_PATH', get_template_directory_uri() );
