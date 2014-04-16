@@ -23,18 +23,10 @@
  */
 define( 'WPLOVIN_THEME_NAME', 'Aquarius' );
 define( 'WPLOVIN_THEME_SLUG', 'aquarius' );
-define( 'WPLOVIN_THEME_VERSION', '1.0.7' );
+define( 'WPLOVIN_THEME_VERSION', '1.0.8' );
 define( 'WPLOVIN_THEME_AUTHOR', 'wplovin' );
 define( 'WPLOVIN_THEME_AUTHOR_URL', 'http://wplovin.com' );
 define( 'WPLOVIN_THEME_PATH', get_template_directory_uri() );
-
-/**
- * Set up the content width value based on the theme's design.
- *
- * @since Aquarius 1.0
- */
-if ( ! isset( $content_width ) ) 
-	$content_width = 820;
 
 /**
  * Oh, let's add some useful stuff we'll need later.
@@ -42,6 +34,9 @@ if ( ! isset( $content_width ) )
  * @since Aquarius 1.0
  */
 function wplovin_setup() {
+
+	if ( ! isset( $content_width ) ) 
+		$content_width = 820;
 
 	load_theme_textdomain( 'aquarius', get_template_directory() . '/languages' );
 	
@@ -115,15 +110,15 @@ function wplovin_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) 
 		wp_enqueue_script( 'comment-reply' );
 		
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-sidr-js', get_template_directory_uri() . '/js/sidr/jquery.sidr.min.js', array( 'jquery' ), 'v1.2.1', true );
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-scrollspy-js', get_template_directory_uri() . '/js/jquery-scrollspy.js', array( 'jquery' ), 'v1.0', true );
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-ps-js', get_template_directory_uri() . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.with-mousewheel.min.js', array( 'jquery' ), 'v0.4.6', true );
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-fitvids-js', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), 'v1.0.3', true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-sidr-js', WPLOVIN_THEME_PATH . '/js/sidr/jquery.sidr.min.js', array( 'jquery' ), 'v1.2.1', true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-scrollspy-js', WPLOVIN_THEME_PATH . '/js/jquery-scrollspy.js', array( 'jquery' ), 'v1.0', true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-ps-js', WPLOVIN_THEME_PATH . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.with-mousewheel.min.js', array( 'jquery' ), 'v0.4.6', true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-fitvids-js', WPLOVIN_THEME_PATH . '/js/jquery.fitvids.js', array( 'jquery' ), 'v1.0.3', true );
 
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-style', get_stylesheet_uri(), array(), WPLOVIN_THEME_VERSION );
-	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-fa-icons', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.0.3' );
-	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-sidr-css', get_template_directory_uri() . '/js/sidr/jquery.sidr.dark.css', array(), 'v1.2.1' );
-	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-ps-css', get_template_directory_uri() . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.min.css', array(), 'v0.4.6' );
+	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-fa-icons', WPLOVIN_THEME_PATH . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.0.3' );
+	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-sidr-css', WPLOVIN_THEME_PATH . '/js/sidr/jquery.sidr.dark.css', array(), 'v1.2.1' );
+	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-ps-css', WPLOVIN_THEME_PATH . '/js/perfect-scrollbar/perfect-scrollbar-0.4.6.min.css', array(), 'v0.4.6' );
 	
 	if ( is_active_sidebar( 'sidebar-1' ) )
 		$options['sidrSidebar'] = true;
@@ -133,7 +128,7 @@ function wplovin_scripts_styles() {
 		$options['footerMasonry'] = true;
 	}
 	
-	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-aquarius-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), WPLOVIN_THEME_VERSION, true );
+	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-aquarius-js', WPLOVIN_THEME_PATH . '/js/scripts.js', array( 'jquery' ), WPLOVIN_THEME_VERSION, true );
 	wp_localize_script( WPLOVIN_THEME_SLUG .'-aquarius-js', 'wplovin', $options );
 
 }

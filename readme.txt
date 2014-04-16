@@ -18,6 +18,11 @@ Aquarius is a minimal theme with clean Georgia-based typography, built mainly fo
 
 == Changelog ==
 
+= 1.0.8 - Apr 17, 2014 =
+* Changed the fallback for navigation menu (if there's no menu set)
+* Added copyright to readme.txt
+* minor functions.php tweaks
+
 = 1.0.1 - Feb 17, 2014 =
 * Added missing /js/html5.js file
 * Changed get_template_directory_uri() to constant WPLOVIN_THEME_PATH in header.php
@@ -28,3 +33,6 @@ Aquarius is a minimal theme with clean Georgia-based typography, built mainly fo
 
 = 1.0 - Jan 31, 2014 =
 * Initial release
+
+Aquarius WordPress Theme, Copyright 2014 wplovin.com
+Aquarius is distributed under the terms of the GNU GPL
